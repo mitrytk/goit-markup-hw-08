@@ -1,0 +1,45 @@
+/* Наша работа */
+.ourwork {
+
+    @extend %container;
+
+    padding-bottom: 94px;
+
+    &__title {
+        @extend %title;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__textblock {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        height: 70px;
+        padding-top: 27px;
+
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+
+    &__text {
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16/14);
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    &__tumb {
+        @extend %tumb;
+    }
+}

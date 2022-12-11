@@ -1,0 +1,17 @@
+// Утилиты
+@import './utils/variables';
+@import './utils/reset-styles';
+@import './utils/vs';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+// header
+@import './components/logo';
+@import './components/_header';
+
+// main
+@import './components/portfolio-filter';
+@import './components/portfolio-list';
+
+//footer
+@import './components/footer';

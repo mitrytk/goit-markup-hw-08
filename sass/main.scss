@@ -1,0 +1,23 @@
+//Утилиты
+@import './utils/variables';
+@import './utils/reset-styles';
+@import './utils/vs';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+//header
+@import './components/logo';
+@import './components/_header';
+
+//main
+@import './components/hero';
+@import './components/dignity';
+@import './components/ourwork';
+@import './components/ourteam';
+@import './components/clients';
+
+//footer
+@import './components/footer';
+
+//modal
+@import './components/modal-feedback';

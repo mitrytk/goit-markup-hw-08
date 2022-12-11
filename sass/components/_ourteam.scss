@@ -1,0 +1,88 @@
+/* Наша команда */
+.ourteam {
+    @extend %section;
+
+    background-color: var(--background-secondary-color);
+
+    &__container {
+        @extend %container;
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.team-cart {
+
+    background-color: var(--white-color);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &__about {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+
+        color: var(--text-title-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__profession {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    &__icon {
+        @extend %social__icon;
+        fill: var(--social-icon-color);
+
+        @extend %transition-main;
+        transition-property: fill;
+    }
+
+    &__link {
+        @extend %social__link;
+        @extend %transition-main;
+        transition-property: background-color;
+    }
+}
+
+.team-cart__icon {
+
+    .team-cart__link:hover &,
+    .team-cart__link:focus & {
+        fill: var(--white-color);
+    }
+}
+
+.team-cart__link:hover,
+.team-cart__link:focus {
+    background-color: var(--brend-color);
+}

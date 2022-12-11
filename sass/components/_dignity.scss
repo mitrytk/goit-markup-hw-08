@@ -1,0 +1,45 @@
+/* Достоинства */
+
+.dignity {
+
+    @extend %section;
+    @extend %container;
+
+    &__list {
+        @extend %list;
+        display: flex;
+    }
+
+    &__items {
+        width: calc((1170px - (30px*3))/4);
+    }
+
+    &__items+&__items {
+        margin-left: 30px;
+    }
+
+    &__icons {
+        border-radius: 4px;
+        padding: 25px 100px;
+        margin-bottom: 30px;
+
+        background-color: var(--background-secondary-color);
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+
+        color: var(--text-title-color);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}

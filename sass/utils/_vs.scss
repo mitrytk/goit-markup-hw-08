@@ -1,0 +1,30 @@
+.list {
+    list-style: none;
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hide {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.title {
+    color: var(--text-title-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
