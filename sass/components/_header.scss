@@ -120,14 +120,15 @@ body.is-fixed {
     &__list {
         @extend %list;
 
+        @media screen and (min-width: $tablet) and (max-width: $preDesctop) {
+            margin-left: 92px;
+        }
+
         @media screen and (min-width: $tablet) {
 
             display: flex;
             align-items: center;
         }
-
-        // display: flex;
-        // align-items: center;
     }
 
     &__items:not(:last-child) {
