@@ -6,8 +6,8 @@
     &__container {
         @extend %container;
 
-        display: flex;
-        align-items: baseline;
+        // display: flex;
+        // align-items: baseline;
 
         padding-top: 60px;
         padding-bottom: 60px;
@@ -15,15 +15,19 @@
 
     &__address {
         @extend %address;
-        margin-top: 20px;
+        // margin-top: 20px;
     }
 
     &__item+&__item {
-        margin-left: 70px;
+        // margin-left: 70px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 60px;
     }
 
     &__item:nth-child(2) {
-        width: 206px;
+        // width: 206px;
     }
 
     &__title {
@@ -40,9 +44,16 @@
     }
 }
 
+.footer__item .logo--dark {
+    margin-bottom: 20px;
+}
 
 .footer-social {
     @extend %social__list;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
 
     &__icon {
         @extend %social__icon;
@@ -68,8 +79,8 @@
 
 .address {
 
-    &__items+&__items {
-        margin-top: 9px;
+    &__item+&__item {
+        margin-top: 8px;
     }
 
     &__list {
@@ -96,15 +107,15 @@
 
 /* Подписаться на рассылку footer */
 .subscribe {
-    margin-left: 93px;
+    // margin-left: 93px;
 
     &__container {
-        display: flex;
+        // display: flex;
     }
 }
 
 .subscribe__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -118,6 +129,7 @@
     letter-spacing: 0.03em;
 
     color: rgba(255, 255, 255, 0.6);
+
 
 
     @extend %transition-main;
@@ -142,7 +154,7 @@
     align-items: center;
     justify-content: space-between;
 
-    margin-left: 12px;
+    // margin-left: 12px;
     padding: 10px 28px;
 
     min-width: 200px;
@@ -162,6 +174,10 @@
 
     @extend %transition-main;
     transition-property: box-shadow;
+
+    @media screen and (max-width: $preDesctop) {
+        margin-top: 20px;
+    }
 
     &:hover,
     &:focus {

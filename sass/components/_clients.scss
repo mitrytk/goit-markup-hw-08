@@ -6,13 +6,37 @@
 
     &__title {
         @extend %title;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: desctop) {
+            margin-bottom: 30px;
+        }
     }
 
     &__list {
         @extend %list;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: -15px;
+
+        // justify-content: space-between;
+    }
+
+    &__items {
+
+        margin: 15px;
+
+        @media screen and (max-width: $preTablet) {
+            width: calc((100% - 30px * 2)/2);
+        }
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 30px * 3)/3);
+        }
+
+        @media screen and (min-width: $desctop) {
+            width: calc((100% - 30px * 6)/6);
+        }
     }
 
     &__link {
@@ -22,8 +46,6 @@
         justify-content: center;
         align-items: center;
 
-
-        width: 170px;
         height: 92px;
 
         border: 1px solid var(--social-icon-color);

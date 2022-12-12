@@ -10,25 +10,68 @@
 
     &__title {
         @extend %title;
-        margin-bottom: 50px;
+
+        // margin-bottom: 50px;
+        @media screen and (max-width: $preDesctop) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: $desctop) {
+            margin-bottom: 50px;
+        }
     }
 
     &__list {
         @extend %list;
-        display: flex;
-        justify-content: space-between;
+
+        // display: flex;
+        // justify-content: space-between;
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
     }
 }
 
 .team-cart {
+    @media screen and (min-width: $tablet) {
+        margin: 15px;
+        width: calc((100% - 30px * 2)/2);
+    }
+
+    @media screen and (min-width: $desctop) {
+        width: calc((100% - 30px * 4)/4);
+
+    }
 
     background-color: var(--white-color);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+
+    &:not(:last-child) {
+        @media screen and (max-width: $preTablet) {
+            margin-bottom: 30px;
+        }
+    }
 
     &__about {
         padding-top: 30px;
-        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: $preTablet) {
+            padding-bottom: 24px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 30px;
+
+        }
     }
 
     &__name {
@@ -55,8 +98,10 @@
         @extend %list;
         display: flex;
         justify-content: space-between;
-        padding-left: 32px;
-        padding-right: 32px;
+    }
+
+    &__items:not(:last-child) {
+        margin-right: 10px;
     }
 
     &__icon {

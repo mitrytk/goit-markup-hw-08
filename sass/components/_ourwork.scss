@@ -1,5 +1,8 @@
 /* Наша работа */
 .ourwork {
+    @media screen and (max-width: $preDesctop) {
+        display: none;
+    }
 
     @extend %container;
 

@@ -6,13 +6,20 @@
 
     max-width: 1600px;
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
 
     background-color: #2F303A;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
+
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @media screen and (min-width: $desctop) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
 }
 
 .hero__title {
@@ -21,15 +28,22 @@
 
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: calc(42/26);
+
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desctop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
+
 }
 
 .hero__button {
-    padding: 10px 32px;
+    padding: 10px 24px;
     color: #ffffff;
     background-color: var(--brend-color);
     border-radius: 4px;
@@ -39,9 +53,14 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.06em;
 
     @extend %transition-main;
     transition-property: cursor;
+
+    @media screen and (min-width: $desctop) {
+        padding: 10px 32px;
+    }
 
     &:hover,
     &:focus {

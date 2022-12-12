@@ -8,7 +8,22 @@
     font-size: 26px;
     line-height: 1.38;
 
+    @media screen and (min-width: $tablet) {
+
+        font-size: 24px;
+        line-height: calc(28/24);
+        letter-spacing: 0.03em;
+    }
+
+    @media screen and (min-width: $desctop) {
+
+        font-size: 26px;
+        line-height: calc(31/26);
+    }
+
     & span {
         color: var(--brend-color);
     }
+
+
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -15,44 +15,73 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body data-body data-body-fixed>
     <header class="header">
       <!-- Навигация -->
       <div class="header__container">
-        <nav class="nav-site">
           <a class="logo" href="./index.html" lang="en"
             ><span>Web</span>Studio</a
           >
+          
+          <button class="button-burger is-open" type="button" aria-expanded="false" data-menu-button>
+            <svg class="button-burger__icon" width="40" height="40" aria-label="перемикач мобільного меню" aria-controls="nav-site__container">
+              <use class="button-burger__open" href="./images/symbol-defs.svg#icon-burger-open"></use>
+              <use class="button-burger__cross" href="./images/symbol-defs.svg#icon-burger-close"></use>
+            </svg>
+          </button>
+          
+          <div class="nav-site__container" id="nav-site__container" data-menu>
+            <nav class="nav-site">
+              <ul class="nav-site__list">
+                <li class="nav-site__items">
+                  <a class="nav-site__link nav-site__link--active" href="./index.html">Студія</a>
+                </li>
+                <li class="nav-site__items">
+                  <a class="nav-site__link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="nav-site__items">
+                  <a class="nav-site__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Контактная информация -->
+            <ul class="nav-contacts">
 
-          <ul class="nav-site__list">
-            <li class="nav-site__items">
-              <a class="nav-site__link nav-site__link--active" href="./index.html">Студія</a>
-            </li>
-            <li class="nav-site__items">
-              <a class="nav-site__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="nav-site__items">
-              <a class="nav-site__link" href="">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- Контактная информация -->
-        <ul class="nav-contacts">
-          <li class="nav-contacts__items">
-            <a class="nav-contacts__link" href="mailto:info@devstudio.com">
-              <svg class="nav-contacts__icon" width="16" height="16">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg><span>info@devstudio.com</span></a
-            >
-          </li>
-          <li class="nav-contacts__items">
-            <a class="nav-contacts__link" href="tel:+380961111111">
-              <svg class="nav-contacts__icon" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg><span>+38 096 111 11 11</span></a
-            >
-          </li>
-        </ul>
+              <li class="nav-contacts__items">
+                <a class="nav-contacts__link" href="tel:+380961111111">
+                  <svg class="nav-contacts__icon" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg><span>+38 096 111 11 11</span></a
+                >
+              </li>
+              <li class="nav-contacts__items">
+                <a class="nav-contacts__link" href="mailto:info@devstudio.com">
+                  <svg class="nav-contacts__icon" width="16" height="16">
+                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                  </svg><span>info@devstudio.com</span></a
+                >
+              </li>
+            </ul>
+            <ul class="nav-social">
+              <li class="nav-social__items">
+                <a href="" class="nav-social__link" target="_blank"
+                      rel="noreferrer noopener">Instagram</a>
+              </li>
+              <li class="nav-social__items">
+                <a href="" class="nav-social__link" target="_blank"
+                      rel="noreferrer noopener">Twitter</a>
+              </li>
+              <li class="nav-social__items">
+                <a href="" class="nav-social__link" target="_blank"
+                      rel="noreferrer noopener">Facebook</a>
+              </li>
+              <li class="nav-social__items">
+                <a href="" class="nav-social__link" target="_blank"
+                      rel="noreferrer noopener">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          
       </div>
     </header>
 
@@ -439,7 +468,7 @@
         <h2 class="clients__title">Постійні клієнти</h2>
 
         <ul class="clients__list">
-          <li class="client__items">
+          <li class="clients__items">
             <a
               href=""
               class="clients__link"
@@ -451,7 +480,7 @@
               </svg>
             </a>
           </li>
-          <li class="client__items">
+          <li class="clients__items">
             <a
               href=""
               class="clients__link"
@@ -463,7 +492,7 @@
               </svg>
             </a>
           </li>
-          <li class="client__items">
+          <li class="clients__items">
             <a
               href=""
               class="clients__link"
@@ -475,7 +504,7 @@
               </svg>
             </a>
           </li>
-          <li class="client__items">
+          <li class="clients__items">
             <a
               href=""
               class="clients__link"
@@ -487,7 +516,7 @@
               </svg>
             </a>
           </li>
-          <li class="client__items">
+          <li class="clients__items">
             <a
               href=""
               class="clients__link"
@@ -499,7 +528,7 @@
               </svg>
             </a>
           </li>
-          <li class="client__items">
+          <li class="clients__items">
             <a
               href=""
               class="clients__link"
@@ -682,7 +711,7 @@
           </form>
       </div>
     </div>
-
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

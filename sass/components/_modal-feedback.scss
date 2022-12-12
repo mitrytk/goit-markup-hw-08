@@ -9,6 +9,7 @@
     visibility: visible;
     position: fixed;
     top: 0;
+    z-index: 2;
 
     width: 100%;
     height: 100%;
@@ -19,18 +20,35 @@
 }
 
 .modal {
+    overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     left: 50%;
     top: 50%;
     display: flex;
 
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
-    height: 581px;
+
     background-color: var(--white-color);
 
     @extend %transition-main;
     transition-property: transform;
+
+    @media screen and (max-width: $preTablet) {
+        width: 93%;
+        height: 609px;
+
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+        height: 609px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        width: 528px;
+        height: 581px;
+    }
 
     .backdrop.is-hidden>& {
 
@@ -81,11 +99,12 @@
 
         font-weight: 700;
         font-size: 20px;
-        line-height: calc(23/20);
+        line-height: calc(30/20);
         text-align: center;
         letter-spacing: 0.03em;
 
         color: var(--text-title-color);
+
     }
 
     &__list {
@@ -173,7 +192,7 @@
 }
 
 .feedback__submit {
-    padding: 10px 32px;
+    padding: 10px 52px;
     color: #ffffff;
     background-color: var(--brend-color);
     border-radius: 4px;
@@ -183,12 +202,14 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.06em;
 
     margin: 0 auto;
     padding: 10px 52px;
 
     @extend %transition-main;
     transition-property: box-shadow, background-color, color;
+
 
     &:hover,
     &:focus {
@@ -199,21 +220,36 @@
 }
 
 .checkbox {
-    padding-left: 12px;
+
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: $desctop) {
+        padding-left: 12px;
+    }
 
     &__label {
         display: flex;
         align-items: center;
+        height: auto;
     }
 
     &__text {
         margin-left: 8px;
 
-        font-size: 14px;
-        line-height: calc(24/14);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: calc(14/12);
         letter-spacing: 0.03em;
+
+        @media screen and (max-width: 466px) {
+            width: 250px;
+        }
+
+        @media screen and (min-width: $desctop) {
+            font-size: 14px;
+            line-height: calc(24/14);
+        }
     }
 
     &__link {
