@@ -72,17 +72,17 @@
     position: absolute;
 
     transform: translateY(0);
-    // padding-top: 63px;
-    // padding-left: 24px;
+    padding-top: 63px;
+    padding-left: 24px;
     width: 100%;
-    // height: 294px;
+    height: 294px;
     background-color: #2195f3ee;
 
     @extend %transition-main;
     transition-property: transform;
 
     &-text {
-        // width: 322px;
+        width: 322px;
 
         font-size: 18px;
         line-height: calc(28/18);
