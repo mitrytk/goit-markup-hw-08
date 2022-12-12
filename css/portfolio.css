@@ -218,7 +218,7 @@ body.is-fixed {
   background-color: inherit;
   border: none;
   padding: 0;
-  z-index: 1;
+  z-index: 10;
   fill: #000;
 }
 .button-burger:hover {
@@ -243,6 +243,7 @@ body.is-fixed {
 }
 
 .nav-site__container {
+  z-index: 9;
   transition-property: transform;
 }
 @media screen and (max-width: 767.98px) {
@@ -471,13 +472,29 @@ body.is-fixed {
 /* фильтр портфолио */
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  gap: 15px 8px;
+  flex-wrap: wrap;
 }
-.filter__items + .filter__items {
-  margin-left: 8px;
+@media screen and (max-width: 767.98px) {
+  .filter {
+    max-width: 400px;
+  }
 }
-
+@media screen and (max-width: 1199.98px) {
+  .filter {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
 .filter__button {
   min-width: 73px;
   padding-top: 6px;
@@ -504,14 +521,27 @@ body.is-fixed {
 
 /* список примера работ */
 .portfolio__list {
-  display: flex;
-  flex-wrap: wrap;
   margin: -15px;
 }
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .portfolio__items {
-  width: 370px;
   margin: 15px;
   outline: 1px solid #EEEEEE;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .portfolio__items {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__items {
+    width: calc((100% - 90px) / 3);
+  }
 }
 .portfolio__about {
   padding: 20px 24px;
@@ -544,15 +574,11 @@ body.is-fixed {
 .portfolio__desc {
   position: absolute;
   transform: translateY(0);
-  padding-top: 63px;
-  padding-left: 24px;
   width: 100%;
-  height: 294px;
   background-color: rgba(33, 149, 243, 0.9333333333);
   transition-property: transform;
 }
 .portfolio__desc-text {
-  width: 322px;
   font-size: 18px;
   line-height: 1.5555555556;
   letter-spacing: 0.03em;

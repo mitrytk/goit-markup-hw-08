@@ -36,7 +36,7 @@ body.is-fixed {
     background-color: inherit;
     border: none;
     padding: 0;
-    z-index: 1;
+    z-index: 10;
     fill: #000;
 
     &:hover {
@@ -61,6 +61,7 @@ body.is-fixed {
 }
 
 .nav-site__container {
+    z-index: 9;
 
     @media screen and (max-width: $preTablet) {
         display: flex;
@@ -95,7 +96,6 @@ body.is-fixed {
 
 .nav-site__container.is-open {
     @media screen and (max-width: $preTablet) {
-
         transform: translateY(0);
     }
 }

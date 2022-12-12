@@ -5,15 +5,25 @@
 
     &__list {
         @extend %list;
-        display: flex;
-        flex-wrap: wrap;
         margin: -15px;
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__items {
-        width: calc((1170px - (30px*2))/3);
         margin: 15px;
         outline: 1px solid #EEEEEE;
+
+        @media screen and (min-width: $tablet) and (max-width: $preDesctop) {
+            width: calc((100% - 30px * 2) / 2);
+        }
+
+        @media screen and (min-width: $desctop) {
+            width: calc((100% - 30px * 3) / 3);
+        }
     }
 
     &__about {
@@ -62,17 +72,17 @@
     position: absolute;
 
     transform: translateY(0);
-    padding-top: 63px;
-    padding-left: 24px;
+    // padding-top: 63px;
+    // padding-left: 24px;
     width: 100%;
-    height: 294px;
+    // height: 294px;
     background-color: #2195f3ee;
 
     @extend %transition-main;
     transition-property: transform;
 
     &-text {
-        width: 322px;
+        // width: 322px;
 
         font-size: 18px;
         line-height: calc(28/18);
