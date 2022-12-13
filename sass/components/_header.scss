@@ -123,6 +123,7 @@ body.is-fixed {
 .nav-site {
     @media screen and (max-width: $preTablet) {
         flex-grow: 1;
+        margin-bottom: 32px;
 
         font-weight: 500;
         font-size: 40px;
