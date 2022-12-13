@@ -102,9 +102,7 @@ body.is-fixed {
 
     @media screen and (max-width: $preTablet) {
         margin: 0 auto;
-        padding-left: 15px;
-        padding-right: 15px;
-        width: 450px;
+        max-width: 450px;
 
         display: flex;
         flex-direction: column;
