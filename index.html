@@ -31,55 +31,57 @@
           </button>
           
           <div class="nav-site__container" id="nav-site__container" data-menu>
-            <nav class="nav-site">
-              <ul class="nav-site__list">
-                <li class="nav-site__items">
-                  <a class="nav-site__link nav-site__link--active" href="./index.html">Студія</a>
+            <div class="nav-site__center">
+              <nav class="nav-site">
+                <ul class="nav-site__list">
+                  <li class="nav-site__items">
+                    <a class="nav-site__link nav-site__link--active" href="./index.html">Студія</a>
+                  </li>
+                  <li class="nav-site__items">
+                    <a class="nav-site__link" href="./portfolio.html">Портфоліо</a>
+                  </li>
+                  <li class="nav-site__items">
+                    <a class="nav-site__link" href="">Контакти</a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- Контактная информация -->
+              <ul class="nav-contacts">
+  
+                <li class="nav-contacts__items">
+                  <a class="nav-contacts__link" href="tel:+380961111111">
+                    <svg class="nav-contacts__icon" width="10" height="16">
+                      <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                    </svg><span>+38 096 111 11 11</span></a
+                  >
                 </li>
-                <li class="nav-site__items">
-                  <a class="nav-site__link" href="./portfolio.html">Портфоліо</a>
-                </li>
-                <li class="nav-site__items">
-                  <a class="nav-site__link" href="">Контакти</a>
+                <li class="nav-contacts__items">
+                  <a class="nav-contacts__link" href="mailto:info@devstudio.com">
+                    <svg class="nav-contacts__icon" width="16" height="16">
+                      <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                    </svg><span>info@devstudio.com</span></a
+                  >
                 </li>
               </ul>
-            </nav>
-            <!-- Контактная информация -->
-            <ul class="nav-contacts">
-
-              <li class="nav-contacts__items">
-                <a class="nav-contacts__link" href="tel:+380961111111">
-                  <svg class="nav-contacts__icon" width="10" height="16">
-                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                  </svg><span>+38 096 111 11 11</span></a
-                >
-              </li>
-              <li class="nav-contacts__items">
-                <a class="nav-contacts__link" href="mailto:info@devstudio.com">
-                  <svg class="nav-contacts__icon" width="16" height="16">
-                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                  </svg><span>info@devstudio.com</span></a
-                >
-              </li>
-            </ul>
-            <ul class="nav-social">
-              <li class="nav-social__items">
-                <a href="" class="nav-social__link" target="_blank"
-                      rel="noreferrer noopener">Instagram</a>
-              </li>
-              <li class="nav-social__items">
-                <a href="" class="nav-social__link" target="_blank"
-                      rel="noreferrer noopener">Twitter</a>
-              </li>
-              <li class="nav-social__items">
-                <a href="" class="nav-social__link" target="_blank"
-                      rel="noreferrer noopener">Facebook</a>
-              </li>
-              <li class="nav-social__items">
-                <a href="" class="nav-social__link" target="_blank"
-                      rel="noreferrer noopener">LinkedIn</a>
-              </li>
-            </ul>
+              <ul class="nav-social">
+                <li class="nav-social__items">
+                  <a href="" class="nav-social__link" target="_blank"
+                        rel="noreferrer noopener">Instagram</a>
+                </li>
+                <li class="nav-social__items">
+                  <a href="" class="nav-social__link" target="_blank"
+                        rel="noreferrer noopener">Twitter</a>
+                </li>
+                <li class="nav-social__items">
+                  <a href="" class="nav-social__link" target="_blank"
+                        rel="noreferrer noopener">Facebook</a>
+                </li>
+                <li class="nav-social__items">
+                  <a href="" class="nav-social__link" target="_blank"
+                        rel="noreferrer noopener">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
           
       </div>
@@ -97,7 +99,7 @@
 
         <ul class="dignity__list">
           <li class="dignity__items">
-            <svg class="dignity__icons" width="270" height="120">
+            <svg class="dignity__icons" width="70" height="70">
               <use href="./images/symbol-defs.svg#icon-antenna"></use>
             </svg>
             <h3 class="dignity__subtitle">УВАГА ДО ДЕТАЛЕЙ</h3>
@@ -144,7 +146,8 @@
           <li class="ourwork__items">
             <div class="ourwork__tumb">
               <img
-              src="./images/metier_1.jpg"
+              srcset="./images/metier-desctop_1x.jpg 1x, ./images/metier-desctop_2x.jpg 2x"
+              src="./images/metier-desctop_1x.jpg"
               alt="процес планування"
               width="370"
               height="294"
@@ -157,7 +160,8 @@
           <li class="ourwork__items">
             <div class="ourwork__tumb">
               <img
-              src="./images/metier_2.jpg"
+              srcset="./images/metier-mobile_1x.jpg 1x, ./images/metier-mobile_2x.jpg 2x"
+              src="./images/metier-mobile_1x.jpg"
               alt="процес створеня макету"
               width="370"
               height="294"
@@ -169,7 +173,8 @@
           <li class="ourwork__items">
             <div class="ourwork__tumb">
               <img
-              src="./images/metier_3.jpg"
+              srcset="./images/metier-designe_1x.jpg 1x, ./images/metier-designe_2x.jpg 2x"
+              src="./images/metier-designe_1x.jpg"
               alt="процес графічного оформлення"
               width="370"
               height="294"
@@ -188,10 +193,11 @@
           <ul class="ourteam__list">
             <li class="team-cart">
               <img
-                src="./images/product_designer.jpg"
+                class="team-cart__img"
+                srcset="./images/product_designer-270px.jpg 270w, ./images/product_designer-540px.jpg 540w, ./images/product_designer-810px.jpg 810w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                src="./images/product_designer-270px.jpg"
                 alt="усміхнений молодий чоловік в окулярах с бородою"
-                width="270"
-                height="260"
               />
               <div class="team-cart__about">
                 <h3 class="team-cart__name">Ігор Дем'яненко</h3>
@@ -257,10 +263,11 @@
             </li>
             <li class="team-cart">
               <img
+                class="team-cart__img"
+                srcset="./images/frontend_developer-270px.jpg 270w, ./images/frontend_developer-540px.jpg 540w, ./images/frontend_developer-810px.jpg 810w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
                 src="./images/frontend_developer.jpg"
                 alt="усміхнена молода дівчина в окулярах"
-                width="270"
-                height="260"
               />
               <div class="team-cart__about">
                 <h3 class="team-cart__name">Ольга Рєпіна</h3>
@@ -326,10 +333,11 @@
             </li>
             <li class="team-cart">
               <img
+                class="team-cart__img"
+                srcset="./images/marketing-270px.jpg 270w, ./images/marketing-540px.jpg 540w, ./images/marketing-810px.jpg 810w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
                 src="./images/marketing.jpg"
                 alt="усміхнений молодий чоловік"
-                width="270"
-                height="260"
               />
               <div class="team-cart__about">
                 <h3 class="team-cart__name">Микола Тарасов</h3>
@@ -394,10 +402,11 @@
             </li>
             <li class="team-cart">
               <img
+                class="team-cart__img"
+                srcset="./images/ui_designer-270px.jpg 270w, ./images/ui_designer-540px.jpg 540w, ./images/ui_designer-810px.jpg 810w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
                 src="./images/ui_designer.jpg"
                 alt="усміхнений молодий чоловік в окулярах с бородою"
-                width="270"
-                height="260"
               />
               <div class="team-cart__about">
                 <h3 class="team-cart__name">Михайло Єрмаков</h3>

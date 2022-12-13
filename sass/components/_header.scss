@@ -64,8 +64,6 @@ body.is-fixed {
     z-index: 9;
 
     @media screen and (max-width: $preTablet) {
-        display: flex;
-        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
@@ -98,6 +96,28 @@ body.is-fixed {
     @media screen and (max-width: $preTablet) {
         transform: translateY(0);
     }
+}
+
+.nav-site__center {
+
+    @media screen and (max-width: $preTablet) {
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 450px;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
 
 .nav-site {
@@ -234,10 +254,14 @@ body.is-fixed {
         letter-spacing: 0.02em;
     }
 
+    @media screen and (min-width: $tablet) and (max-width: $preDesctop) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     @media screen and (min-width: $desctop) {
         margin-left: auto;
         display: flex;
-
     }
 
     &__items:not(:last-child) {
@@ -265,7 +289,7 @@ body.is-fixed {
     &__items+&__items {
 
         @media screen and (min-width: $tablet) and (max-width: $preDesctop) {
-            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         @media screen and (min-width: $desctop) {

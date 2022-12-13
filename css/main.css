@@ -45,6 +45,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -103,6 +105,11 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__container, .clients, .ourteam__container, .ourwork, .dignity, .header__container {
+    max-width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer__container, .clients, .ourteam__container, .ourwork, .dignity, .header__container {
@@ -268,8 +275,6 @@ body.is-fixed {
 }
 @media screen and (max-width: 767.98px) {
   .nav-site__container {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -298,6 +303,26 @@ body.is-fixed {
 @media screen and (max-width: 767.98px) {
   .nav-site__container.is-open {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .nav-site__center {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-site__center {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -408,6 +433,12 @@ body.is-fixed {
     letter-spacing: 0.02em;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .nav-contacts {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 @media screen and (min-width: 1200px) {
   .nav-contacts {
     margin-left: auto;
@@ -430,7 +461,7 @@ body.is-fixed {
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .nav-contacts__items + .nav-contacts__items {
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -497,11 +528,41 @@ body.is-fixed {
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2F303A;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding-top: 118px;
   padding-bottom: 118px;
+}
+@media screen and (max-width: 767.98px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-Mobile480px.jpg);
+  }
+}
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-Mobile950px.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-Tablet768px.jpg.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-Tablet1536px.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-Desctop1600px.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-Desctop3200px.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -577,9 +638,10 @@ body.is-fixed {
 .dignity__icons {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border-radius: 4px;
   margin-bottom: 30px;
   background-color: var(--background-secondary-color);
@@ -1014,7 +1076,7 @@ body.is-fixed {
   visibility: visible;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 11;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
